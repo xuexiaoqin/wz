@@ -22,7 +22,20 @@ int main(){
         scanf("%d", &code);
         if (code == 1)
         {
-            
+            printf("请输入车辆位置的坐标\n");
+            int x;
+            int y;
+            scanf("%d",&x);
+            scanf("%d",&y);
+
+            arr[index].x=x;
+            arr[index].y=y;
+            index++;
+
+            printf("添加成功，点击回车继续\n");
+            char m;
+            scanf("%c",&m);
+            scanf("%c",&m);
         }
         if (code == 2)
         {
