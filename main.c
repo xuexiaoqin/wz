@@ -50,6 +50,17 @@ int main(){
         }
         if (code == 3)
         {
+             printf("所有车辆位置信息如下\n");
+            
+            for(int i = 0; i < index; i++)
+            {
+                printf("所有车辆位置为(%d,%d)\n",arr[i].x,arr[i].y);
+            } 
+            printf("添加成功，点击回车继续\n");
+            char m;
+            scanf("%c",&m);
+            scanf("%c",&m);
+
         }
         if (code == 4)
         {
