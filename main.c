@@ -39,6 +39,14 @@ int main(){
         }
         if (code == 2)
         {
+             printf("删除最后一个车辆位置\n");
+            index--;
+
+            printf("删除成功，点击回车继续\n");
+            char m;
+            scanf("%c",&m);
+            scanf("%c",&m);
+
         }
         if (code == 3)
         {
