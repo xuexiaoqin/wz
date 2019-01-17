@@ -5,11 +5,11 @@ struct Point
     int x;
     int y;
 };
+int index = 0;
+struct Point arr[100];
 
 int main()
 {
-    int index = 0;
-    struct Point arr[100];
 
     printf("欢迎进入专场位置管理系统!\n");
     while (1)
@@ -19,6 +19,7 @@ int main()
         printf("3---显示全部车辆位置\n");
         printf("4---返回离我的位置最近的车辆\n");
         printf("5---退出\n");
+
         printf("请选择相应功能\n");
         int code;
         scanf("%d", &code);
@@ -41,13 +42,23 @@ int main()
         }
         if (code == 2)
         {
-            printf("删除最后一个车辆位置\n");
-            index--;
 
-            printf("删除成功，点击回车继续\n");
-            char m;
-            scanf("%c", &m);
-            scanf("%c", &m);
+            if (index > 0)
+            {
+                index--;
+
+                printf("删除成功，点击回车继续\n");
+                char m;
+                scanf("%c", &m);
+                scanf("%c", &m);
+            }
+            else{
+                printf("无车辆信息,删除失败，点击回车继续\n");
+                char m;
+                scanf("%c", &m);
+                scanf("%c", &m);
+            }
+
         }
         if (code == 3)
         {
@@ -57,7 +68,7 @@ int main()
             {
                 printf("所有车辆位置为(%d,%d)\n", arr[i].x, arr[i].y);
             }
-            printf("添加成功，点击回车继续\n");
+            printf("显示成功，点击回车继续\n");
             char m;
             scanf("%c", &m);
             scanf("%c", &m);
